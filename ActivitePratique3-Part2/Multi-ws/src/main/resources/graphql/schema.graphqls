@@ -1,15 +1,21 @@
 type Query{
     compteList : [Compte]
+    getCompte (id: Float) : Compte
 
 }
 
+type Mutation {
+addCompte(compte :CompteInput ) :Compte
+}
+input CompteInput{
+    id :Float,
+    solde : Float,
+}
 
 type Compte{
     id :Float,
     solde : Float,
    date : Float,
-
-
 }
 
 
